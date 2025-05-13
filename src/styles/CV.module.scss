@@ -1,23 +1,23 @@
-import styled from 'styled-components';
+@import './base.scss';
 
-export const Container = styled.div`
+.container {
   width: 794px; // A4 PDF width at 96dpi
   margin: 40px auto;
   background-color: white;
   padding: 40px 48px;
   
-  @media print {
+  @include print-styles {
     margin: 0;
     padding: 0;
     width: 100%;
     box-shadow: none;
   }
-`;
+}
 
-export const Header = styled.header`
+.header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid $primary-color;
   position: relative;
 
   &::after {
@@ -27,7 +27,7 @@ export const Header = styled.header`
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #eaeaea;
+    background-color: $light-border;
   }
 
   h1 {
@@ -38,21 +38,21 @@ export const Header = styled.header`
   p {
     margin: 2px 0;
   }
-`;
+}
 
-export const Title = styled.p`
-  color: #d9534f;
+.title {
+  color: $accent-color;
   font-size: 1.2em;
   margin: 6px 0 4px 0;
-`;
+}
 
-export const Section = styled.section`
+.section {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 40px;
   margin-bottom: 30px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid $light-border;
   align-items: start;
   page-break-inside: avoid;
   break-inside: avoid;
@@ -62,62 +62,62 @@ export const Section = styled.section`
     margin-bottom: 0;
   }
 
-  @media print {
+  @include print-styles {
     padding-top: 48px;
     
     &:first-of-type {
       padding-top: 0;
     }
   }
-`;
+}
 
-export const SectionTitle = styled.h2`
+.sectionTitle {
   margin: 0;
   font-size: 1.4em;
-  color: #333;
+  color: $primary-color;
   position: sticky;
   top: 20px;
   padding-bottom: 5px;
   display: inline-block;
-`;
+}
 
-export const Content = styled.div`
+.content {
   margin: 0;
-`;
+}
 
-export const SkillsGrid = styled.div`
+.skillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-`;
+}
 
-export const SkillsCategory = styled.div`
+.skillsCategory {
   h3 {
     margin-bottom: 10px;
-    color: #555;
+    color: $secondary-color;
     font-size: 90%;
     font-weight: 600;
   }
-`;
+}
 
-export const List = styled.ul`
+.list {
   padding: 0;
   margin: 0;
   font-size: 90%;
-`;
+}
 
-export const ListItem = styled.li`
+.listItem {
   margin-left: 2rem;
   
   i {
     width: 20px;
     margin-right: 5px;
     text-align: center;
-    color: #555;
+    color: $secondary-color;
   }
-`;
+}
 
-export const ExperienceItem = styled.div`
+.experienceItem {
   margin-bottom: 25px;
 
   &:last-child {
@@ -134,40 +134,40 @@ export const ExperienceItem = styled.div`
     color: #666;
     font-style: italic;
   }
-`;
+}
 
-export const StyledLink = styled.a`
-  color: #0275d8;
+.link {
+  color: $link-color;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-`;
+}
 
-export const GlobalStyles = styled.div`
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+.globalStyles {
+  font-family: $font-family;
+  line-height: $line-height;
+  color: $primary-color;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 
-  @media print {
+  @include print-styles {
     background-color: white;
   }
-`;
+}
 
-export const Icon = styled.i`
+.icon {
   width: 20px;
   margin-right: 5px;
   text-align: center;
   vertical-align: middle;
-`;
+}
 
-export const IconImage = styled.img`
+.iconImage {
   width: 20px;
   height: 20px;
   margin-right: 5px;
   vertical-align: middle;
-`;
+}

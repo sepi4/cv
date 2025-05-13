@@ -12,3 +12,9 @@
 - I want to be able to easily modify the CV in the future
 - Content should be in a separate ts data structure
 - Use TypeScript for type safety
+
+## Task 2
+- Change styled-components to CSS modules
+- User scss for styling
+- Use CSS modules for styling
+- Ensure that the code is clean and well-organized

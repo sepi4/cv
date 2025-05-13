@@ -1,0 +1,19 @@
+$primary-color: #333;
+$secondary-color: #555;
+$accent-color: #d9534f;
+$link-color: #0275d8;
+$light-border: #eaeaea;
+
+$font-family: Arial, sans-serif;
+$base-font-size: 16px;
+$line-height: 1.6;
+
+// Media queries
+$print-mode: print;
+
+// Mixins
+@mixin print-styles {
+  @media print {
+    @content;
+  }
+}

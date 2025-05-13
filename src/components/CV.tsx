@@ -1,21 +1,7 @@
 import React from 'react';
 import type { CVData } from '../types/cv.types';
 import { SkillIcon } from './SkillIcon';
-import {
-  Container,
-  Header,
-  Title,
-  Section,
-  SectionTitle,
-  Content,
-  SkillsGrid,
-  SkillsCategory,
-  List,
-  ListItem,
-  ExperienceItem,
-  StyledLink,
-  GlobalStyles,
-} from '../styles/styled-components';
+import styles from '../styles/CV.module.scss';
 
 interface CVProps {
   data: CVData;
@@ -23,100 +9,100 @@ interface CVProps {
 
 export const CV: React.FC<CVProps> = ({ data }) => {
   return (
-    <GlobalStyles>
-      <Container>
-        <Header>
+    <div className={styles.globalStyles}>
+      <div className={styles.container}>
+        <header className={styles.header}>
           <h1>{data.personalInfo.name}</h1>
-          <Title>{data.personalInfo.jobTitle}</Title>
+          <p className={styles.title}>{data.personalInfo.jobTitle}</p>
           <p>{data.personalInfo.phone}</p>
           <p>{data.personalInfo.email}</p>
-        </Header>
+        </header>
 
-        <Section>
-          <SectionTitle>About Me</SectionTitle>
-          <Content>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>About Me</h2>
+          <div className={styles.content}>
             {data.aboutMe.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
-          </Content>
-        </Section>
+          </div>
+        </section>
 
-        <Section>
-          <SectionTitle>Skills</SectionTitle>
-          <Content>
-            <SkillsGrid>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Skills</h2>
+          <div className={styles.content}>
+            <div className={styles.skillsGrid}>
               {data.skills.map((category, index) => (
-                <SkillsCategory key={index}>
+                <div key={index} className={styles.skillsCategory}>
                   <h3>{category.title}</h3>
-                  <List>
+                  <ul className={styles.list}>
                     {category.skills.map((skill, skillIndex) => (
-                      <ListItem key={skillIndex}>
+                      <li key={skillIndex} className={styles.listItem}>
                         <SkillIcon skill={skill} />
                         {skill.name}
-                      </ListItem>
+                      </li>
                     ))}
-                  </List>
-                </SkillsCategory>
+                  </ul>
+                </div>
               ))}
-            </SkillsGrid>
-          </Content>
-        </Section>
+            </div>
+          </div>
+        </section>
 
-        <Section>
-          <SectionTitle>Experience</SectionTitle>
-          <Content>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Experience</h2>
+          <div className={styles.content}>
             {data.experience.map((item, index) => (
-              <ExperienceItem key={index}>
+              <div key={index} className={styles.experienceItem}>
                 <h3>{item.company} / {item.position}</h3>
                 <p>{item.period}, {item.location}</p>
-                <List>
+                <ul className={styles.list}>
                   {item.responsibilities.map((resp, respIndex) => (
-                    <ListItem key={respIndex}>{resp}</ListItem>
+                    <li key={respIndex} className={styles.listItem}>{resp}</li>
                   ))}
-                </List>
-              </ExperienceItem>
+                </ul>
+              </div>
             ))}
-          </Content>
-        </Section>
+          </div>
+        </section>
 
-        <Section>
-          <SectionTitle>Links</SectionTitle>
-          <Content>
-            <List>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Links</h2>
+          <div className={styles.content}>
+            <ul className={styles.list}>
               {data.links.map((link, index) => (
-                <ListItem key={index}>
-                  {link.title}: <StyledLink href={link.url} target="_blank">{link.url}</StyledLink>
-                </ListItem>
+                <li key={index} className={styles.listItem}>
+                  {link.title}: <a className={styles.link} href={link.url} target="_blank">{link.url}</a>
+                </li>
               ))}
-            </List>
-          </Content>
-        </Section>
+            </ul>
+          </div>
+        </section>
 
-        <Section>
-          <SectionTitle>Education</SectionTitle>
-          <Content>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Education</h2>
+          <div className={styles.content}>
             {data.education.map((item, index) => (
-              <ExperienceItem key={index}>
+              <div key={index} className={styles.experienceItem}>
                 <h3>{item.institution}</h3>
                 <p>{item.description}</p>
-              </ExperienceItem>
+              </div>
             ))}
-          </Content>
-        </Section>
+          </div>
+        </section>
 
-        <Section>
-          <SectionTitle>References</SectionTitle>
-          <Content>
-            <List>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>References</h2>
+          <div className={styles.content}>
+            <ul className={styles.list}>
               {data.references.map((ref, index) => (
-                <ListItem key={index}>
-                  <strong>{ref.name}</strong> ({ref.title}), {ref.contact}
-                </ListItem>
+                <li key={index} className={styles.listItem}>
+                  <strong>{ref.name}</strong> ({ref.jobTitle}), {ref.contact}
+                </li>
               ))}
-            </List>
-          </Content>
-        </Section>
-      </Container>
-    </GlobalStyles>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };
