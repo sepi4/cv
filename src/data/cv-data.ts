@@ -18,7 +18,7 @@ export const cvData: CVData = {
       skills: [
         { name: 'JavaScript', icon: 'devicon-javascript-plain colored', isDevicon: true },
         { name: 'TypeScript', icon: 'devicon-typescript-plain colored', isDevicon: true },
-        { name: 'Python', icon: 'devicon-python-plain colored', isDevicon: true },
+        { name: 'Python', icon: 'python.svg', isImage: true },
         { name: 'C#', icon: 'devicon-csharp-plain colored', isDevicon: true },
         { name: 'Java', icon: 'devicon-java-plain colored', isDevicon: true },
       ],

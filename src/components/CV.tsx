@@ -37,7 +37,9 @@ export const CV: React.FC<CVProps> = ({ data }) => {
                   <ul className={styles.list}>
                     {category.skills.map((skill, skillIndex) => (
                       <li key={skillIndex} className={styles.listItem}>
-                        <SkillIcon skill={skill} />
+                        <div style={{ width: '2rem', display: 'inline-block', textAlign: 'center' }}>
+                          <SkillIcon skill={skill} />
+                        </div>
                         {skill.name}
                       </li>
                     ))}
