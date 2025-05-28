@@ -44,9 +44,9 @@ export const cvData: CVData = {
     {
       title: 'Languages',
       skills: [
-        { name: 'Finnish - Native', icon: '/flags/fi.svg', isImage: true },
-        { name: 'Russian - Native', icon: '/flags/ru.svg', isImage: true },
-        { name: 'English - Very Good', icon: '/flags/gb.svg', isImage: true },
+        { name: 'Finnish - Native', icon: 'flags/fi.svg', isImage: true },
+        { name: 'Russian - Native', icon: 'flags/ru.svg', isImage: true },
+        { name: 'English - Very Good', icon: 'flags/gb.svg', isImage: true },
       ],
     },
   ],
