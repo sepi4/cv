@@ -10,6 +10,9 @@ $line-height: 1.6;
 
 // Media queries
 $print-mode: print;
+body {
+  margin: 0;
+}
 
 // Mixins
 @mixin print-styles {

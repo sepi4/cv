@@ -1,8 +1,9 @@
 @import './base.scss';
 
 .container {
+  // aligns the content to the center of the page
+  margin: 0 auto;
   width: 794px; // A4 PDF width at 96dpi
-  margin: 40px auto;
   background-color: white;
   padding: 40px 48px;
   

@@ -44,9 +44,9 @@ export const cvData: CVData = {
     {
       title: 'Languages',
       skills: [
-        { name: 'Finnish - Native', icon: 'fi-fi', isFlag: true },
-        { name: 'Russian - Native', icon: 'fi-ru', isFlag: true },
-        { name: 'English - Very Good', icon: 'fi-gb', isFlag: true },
+        { name: 'Finnish - Native', icon: '/flags/fi.svg', isImage: true },
+        { name: 'Russian - Native', icon: '/flags/ru.svg', isImage: true },
+        { name: 'English - Very Good', icon: '/flags/gb.svg', isImage: true },
       ],
     },
   ],
@@ -74,7 +74,7 @@ export const cvData: CVData = {
   education: [
     {
       institution: 'University of Jyväskylä / Computer Science',
-      description: 'I have completed computer science studies at the University of Jyväskylä, but most of my skills have been acquired through self-study and work experience. I am continuously interested in learning new things and developing professionally.',
+      description: 'I studied computer science at the University of Jyväskylä, where I built a strong foundation in software development. While my formal studies were not completed with a degree, I have continued to grow professionally through self-study and hands-on experience. I am continuously interested in learning new things and developing professionally.',
     },
   ],
   links: [
