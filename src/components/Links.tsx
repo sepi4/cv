@@ -13,10 +13,20 @@ export const Links: React.FC<LinksProps> = ({ data }) => {
       <ul className={styles.list}>
         {data.map((link, index) => (
           <li key={index} className={styles.listItem}>
-            <a className={styles.link} href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+
+            {/* Web version: show title then image if available, otherwise just title */}
+            <a className={`${styles.link} ${styles.webVersion}`} href={link.url} target="_blank" rel="noopener noreferrer">
+              <span className={styles.webLinkTitle}>{link.title}</span>
+              {link.image && (
+                <img src={link.image} alt={`${link.title} icon`} className={styles.linkIconImage} />
+              )}
+            </a>
+
+            {/* Print version: show title and URL */}
             <span className={styles.printOnly}>
-              : <a className={styles.link} href={link.url} target="_blank" rel="noopener noreferrer">{link.url}</a>
+              <a className={styles.link} href={link.url} target="_blank" rel="noopener noreferrer">{link.url}</a>
             </span>
+
           </li>
         ))}
       </ul>

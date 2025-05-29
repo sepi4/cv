@@ -81,14 +81,17 @@ export const cvData: CVData = {
     {
       title: 'Github profile',
       url: 'https://github.com/sepi4',
+      image: 'github.svg',
     },
     {
       title: 'MyCelo (public) React project',
       url: 'https://github.com/sepi4/myCeloJs',
+      image: 'myCelo.ico',
     },
     {
       title: 'LinkedIn',
       url: 'https://www.linkedin.com/in/sergei-polishsuk-89b8a526b/',
+      image: 'linkedin.svg',
     },
   ],
   references: [

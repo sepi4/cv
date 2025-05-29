@@ -145,6 +145,31 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &.webVersion {
+    display: inline-grid; // Use inline-grid for alignment
+    grid-template-columns: auto min-content; // Title takes space, icon fits content
+    gap: 8px; // Space between title and icon
+    align-items: center; // Vertically align items
+    color: $primary-color; // Make title text black
+    text-decoration: none; // Remove underline from the link container
+
+    &:hover {
+      text-decoration: none; // Ensure container itself doesn't get underline
+      .webLinkTitle {
+        text-decoration: underline; // Underline only the title on hover
+      }
+    }
+  }
+}
+
+.linkIconImage {
+  height: 20px; // Keep icon size small
+  // vertical-align and margin-left are handled by grid properties
+}
+
+.printLinkTitle {
+  color: $primary-color; // Ensure title is black in print
 }
 
 .globalStyles {
@@ -176,10 +201,14 @@
 
 .printOnly {
   display: none;
+  color: $primary-color; // Ensure text is black in print
 }
 
 @media print {
   .printOnly {
     display: inline;
+  }
+  .webVersion {
+    display: none; // Hide web version links in print
   }
 }

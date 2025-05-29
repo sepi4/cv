@@ -32,6 +32,7 @@ export interface Reference {
 export interface Link {
   title: string;
   url: string;
+  image?: string;
 }
 export interface PersonalInfo {
     name: string;
