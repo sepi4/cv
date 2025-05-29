@@ -2,7 +2,6 @@ export interface Skill {
   name: string;
   icon: string;
   isDevicon?: boolean;
-  isFlag?: boolean;
   isImage?: boolean;
 }
 
