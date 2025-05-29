@@ -33,14 +33,15 @@ export interface Link {
   title: string;
   url: string;
 }
-
-export interface CVData {
-  personalInfo: {
+export interface PersonalInfo {
     name: string;
     jobTitle: string;
     phone?: string;
     email: string;
-  };
+  }
+
+export interface CVData {
+  personalInfo: PersonalInfo;
   aboutMe: string[];
   skills: SkillCategory[];
   experience: ExperienceItem[];
