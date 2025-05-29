@@ -1,4 +1,4 @@
-@import './base.scss';
+@use './base.scss' as base;
 
 .container {
   // aligns the content to the center of the page
@@ -7,7 +7,7 @@
   background-color: white;
   padding: 40px 48px;
   
-  @include print-styles {
+  @include base.print-styles {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -18,7 +18,7 @@
 .header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid $primary-color;
+  border-bottom: 2px solid base.$primary-color;
   position: relative;
 
   &::after {
@@ -28,7 +28,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $light-border;
+    background-color: base.$light-border;
   }
 
   h1 {
@@ -42,7 +42,7 @@
 }
 
 .title {
-  color: $accent-color;
+  color: base.$accent-color;
   font-size: 1.2em;
   margin: 6px 0 4px 0;
 }
@@ -53,7 +53,7 @@
   gap: 40px;
   margin-bottom: 30px;
   padding-bottom: 25px;
-  border-bottom: 1px solid $light-border;
+  border-bottom: 1px solid base.$light-border;
   align-items: start;
   page-break-inside: avoid;
   break-inside: avoid;
@@ -63,7 +63,7 @@
     margin-bottom: 0;
   }
 
-  @include print-styles {
+  @include base.print-styles {
     padding-top: 48px;
     
     &:first-of-type {
@@ -75,7 +75,7 @@
 .sectionTitle {
   margin: 0;
   font-size: 1.4em;
-  color: $primary-color;
+  color: base.$primary-color;
   position: sticky;
   top: 20px;
   padding-bottom: 5px;
@@ -95,7 +95,7 @@
 .skillsCategory {
   h3 {
     margin-bottom: 10px;
-    color: $secondary-color;
+    color: base.$secondary-color;
     font-size: 90%;
     font-weight: 600;
   }
@@ -115,7 +115,7 @@
     width: 20px;
     margin-right: 5px;
     text-align: center;
-    color: $secondary-color;
+    color: base.$secondary-color;
   }
 }
 
@@ -139,7 +139,7 @@
 }
 
 .link {
-  color: $link-color;
+  color: base.$link-color;
   text-decoration: none;
 
   &:hover {
@@ -151,7 +151,7 @@
     grid-template-columns: auto min-content; // Title takes space, icon fits content
     gap: 8px; // Space between title and icon
     align-items: center; // Vertically align items
-    color: $primary-color; // Make title text black
+    color: base.$primary-color; // Make title text black
     text-decoration: none; // Remove underline from the link container
 
     &:hover {
@@ -168,40 +168,22 @@
   // vertical-align and margin-left are handled by grid properties
 }
 
-.printLinkTitle {
-  color: $primary-color; // Ensure title is black in print
-}
-
 .globalStyles {
-  font-family: $font-family;
-  line-height: $line-height;
-  color: $primary-color;
+  font-family: base.$font-family;
+  line-height: base.$line-height;
+  color: base.$primary-color;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 
-  @include print-styles {
+  @include base.print-styles {
     background-color: white;
   }
 }
 
-.icon {
-  width: 20px;
-  margin-right: 5px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.iconImage {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
 .printOnly {
   display: none;
-  color: $primary-color; // Ensure text is black in print
+  color: base.$primary-color; // Ensure text is black in print
 }
 
 @media print {

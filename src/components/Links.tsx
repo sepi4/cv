@@ -23,7 +23,7 @@ export const Links: React.FC<LinksProps> = ({ data }) => {
             </a>
 
             {/* Print version: show title and URL */}
-            <span className={styles.printOnly}>
+            <span className={styles.printOnly} style={{ marginLeft: '0.5rem' }}>
               <a className={styles.link} href={link.url} target="_blank" rel="noopener noreferrer">{link.url}</a>
             </span>
 
