@@ -173,3 +173,13 @@
   margin-right: 5px;
   vertical-align: middle;
 }
+
+.printOnly {
+  display: none;
+}
+
+@media print {
+  .printOnly {
+    display: inline;
+  }
+}
