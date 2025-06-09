@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./", // Added this line
+  base: "/cv/", // Set to your repository name
   plugins: [react()],
 })
