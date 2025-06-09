@@ -13,10 +13,13 @@ export const References: React.FC<ReferencesProps> = ({ data }) => {
       <ul className={styles.list}>
         {data.map((ref, index) => (
           <li key={index} className={styles.listItem}>
-            <strong>{ref.name}</strong> ({ref.jobTitle}), {ref.contact}
+            <strong>{ref.name}</strong> ({ref.jobTitle})
           </li>
         ))}
       </ul>
+      <p style={{ fontStyle: 'italic', fontSize: '0.8em' }}>
+        Contact details available upon request.
+      </p>
     </Section>
   );
 };

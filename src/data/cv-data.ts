@@ -98,12 +98,10 @@ export const cvData: CVData = {
     {
       name: 'Satu Eskelinen',
       jobTitle: 'Product Owner at Enerkey',
-      contact: 'tel: 044-5774477, email: sates@eg.fi',
     },
     {
       name: 'Juuso Valkeejärvi',
       jobTitle: 'Lead Developer at Jamix Oy',
-      contact: 'tel: 040-7089463',
     },
   ],
 };

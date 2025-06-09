@@ -26,7 +26,6 @@ export interface EducationItem {
 export interface Reference {
   name: string;
   jobTitle: string;
-  contact: string;
 }
 
 export interface Link {
